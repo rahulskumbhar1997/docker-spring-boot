@@ -15,5 +15,5 @@ ENV PATH=${MAVEN_BIN}:$PATH
 RUN echo $PATH
 COPY . .
 RUN mvn clean package
-
+EXPOSE 8080
 CMD ["java", "-jar", "./target/HelloWorldApp-0.0.1-SNAPSHOT.jar"]
