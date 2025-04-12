@@ -20,7 +20,7 @@ public class HelloWorldTest {
 
 		ResponseEntity<String> response = restTemplate.getForEntity("/", String.class);
 		assertEquals(HttpStatus.OK, response.getStatusCode());
-		assertEquals("Hello World!", response.getBody());
+		assertEquals("Hello World from Cloudrockers!", response.getBody());
 	}
 	
 	
