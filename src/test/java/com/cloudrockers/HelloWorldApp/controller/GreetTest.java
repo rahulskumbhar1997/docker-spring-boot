@@ -22,7 +22,7 @@ public class GreetTest {
 		ResponseEntity<GreetMessage> response = restTemplate.getForEntity("/api/greet/Rahul", GreetMessage.class);
 
 		assertEquals(HttpStatus.OK, response.getStatusCode());
-		assertEquals(new GreetMessage("Rahul").getMessage(), response.getBody().getMessage());
+		assertEquals(new GreetMessage("Welcome to CloudRockers Rahul!").getMessage(), response.getBody().getMessage());
 
 	}
 
