@@ -23,4 +23,6 @@ jobs:
     - name: Print directory items
       run: ls -altrh
     - name: Print env variable
-      run: echo ${{ secrets.AWS_ACCESS_KEY_ID }}
+      env:
+        AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      run: echo "$AWS_ACCESS_KEY"
