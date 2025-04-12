@@ -20,5 +20,7 @@ jobs:
       run: docker run spring-boot-app mvn clean test
     - name: Generate deployment package
       run: zip -r spring-boot-app.zip . -x '*.git*'
+    - name: Print directory items
+      run: ls -altrh
     - name: Print env variable
       run: echo ${{ secrets.AWS_ACCESS_KEY_ID }}
