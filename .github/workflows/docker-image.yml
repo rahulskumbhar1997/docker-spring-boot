@@ -18,3 +18,7 @@ jobs:
       run: docker build . --file Dockerfile.dev --tag spring-boot-app
     - name: Run Test cases
       run: docker run spring-boot-app mvn clean test
+    - name: Generate deployment package
+      run: zip -r spring-boot-app.zip . -x '*.git*'
+    - name: Print env variable
+      run: echo ${{ secrets.AWS_ACCESS_KEY_ID }}
