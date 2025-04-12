@@ -13,7 +13,7 @@ public class Greet {
 	@GetMapping("/api/greet/{name}")
 	public GreetMessage getGreetingMessage(@PathVariable("name") String name){
 		
-		return new GreetMessage(name);
+		return new GreetMessage("Welcome to CloudRockers " + name + "!");
 		
 	}
 	

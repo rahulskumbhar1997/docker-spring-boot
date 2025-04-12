@@ -33,7 +33,7 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: demo-app-2
         environment_name: Demo-app-2-dev
-        version_label: 12345
+        version_label: 12346
         region: ap-south-1
         deployment_package: spring-boot-app.zip
-
+        wait_for_deployment: false
